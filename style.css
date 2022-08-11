@@ -44,3 +44,26 @@ main {
 .trybewarts-header-logo {
   height: 80px;
 }
+
+#avaliation {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#avaliation-options {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#avaliation-options label {
+  padding-right: 10px;
+}
+
+#avaliation-opitions-label {
+  margin-right: 30px;
+}
+
+#comment-conteiner {
+  display: flex;
+  flex-direction: column;
+}
