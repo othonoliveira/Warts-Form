@@ -23,6 +23,11 @@ main {
   grid-template-columns: auto auto;
 }
 
-#subject-options {
+.header {
+  display: flex;
+  background-color: rgb(50, 167, 145);
+}
+
+.trybewarts-login {
   display: flex;
 }
