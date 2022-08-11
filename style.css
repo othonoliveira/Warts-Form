@@ -13,7 +13,16 @@ main {
   height: 500px;
 }
 
-#house {
+#selection {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+}
+
+#info {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+#subject-options {
+  display: flex;
 }
