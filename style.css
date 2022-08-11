@@ -1,8 +1,5 @@
-body {
-  text-align: center;
-}
-
 #evaluation-form {
+  border: 1px black solid;
   width: 675px;
   display: flex;
   flex-direction: column;
@@ -14,4 +11,9 @@ main {
 
 #trybewarts-forms-logo {
   height: 500px;
+}
+
+#house {
+  display: flex;
+  flex-direction: column;
 }
