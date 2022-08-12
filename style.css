@@ -13,6 +13,10 @@ main {
   display: flex;
 }
 
+form {
+  
+}
+
 #trybewarts-forms-logo {
   height: 500px;
 }
@@ -22,9 +26,16 @@ main {
   flex-direction: row;
 }
 
-#info {
-  display: grid;
-  grid-template-columns: auto auto;
+#conteiner1 {
+  display: flex;
+  width: fit-content;
+  gap: 30px;
+  justify-content: space-around;
+}
+
+#conteiner2 {
+  display: flex;
+  width: fit-content;
 }
 
 .header {
@@ -59,7 +70,7 @@ main {
   padding-right: 10px;
 }
 
-#avaliation-opitions-label {
+#label-rate {
   margin-right: 30px;
 }
 

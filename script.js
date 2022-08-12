@@ -9,3 +9,17 @@ butaoEntrar.addEventListener('click', () => {
     alert('Email ou senha inválidos.');
   }
 });
+
+window.onload = function disableButton() {
+  const disableCheckBox = document.getElementById('agreement');
+  // Retrieve reference to button
+  const submitButton = document.getElementById('submit-btn');
+
+  disableCheckBox.addEventListener('change', (e) => {
+    if (e.target.checked) {
+      submitButton.disabled = false;
+    } else {
+      submitButton.disabled = true;
+    }
+  });
+};
