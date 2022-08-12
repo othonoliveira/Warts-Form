@@ -9,3 +9,24 @@ butaoEntrar.addEventListener('click', () => {
     alert('Email ou senha inválidos.');
   }
 });
+
+const textArea = document.getElementById('textarea');
+const counter = document.getElementById('counter');
+let contadorEmNumero;
+
+textArea.addEventListener('keydown', (e) => {
+  contadorEmNumero = parseInt(counter.innerText);
+
+  if (contadorEmNumero > 0 && contadorEmNumero <= 500){
+        if(!(e.key == 'Backspace')){
+            contadorEmNumero = contadorEmNumero - 1;
+            counter.innerText = contadorEmNumero;
+        } else if(e.key == 'Backspace' && contadorEmNumero != 500){
+            contadorEmNumero = contadorEmNumero + 1;
+            counter.innerText = contadorEmNumero;    
+        }
+    } else if (contadorEmNumero == 0 && e.key == 'Backspace') {
+        contadorEmNumero = contadorEmNumero + 1;
+        counter.innerText = contadorEmNumero;
+    }
+});
