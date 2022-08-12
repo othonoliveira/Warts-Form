@@ -24,21 +24,30 @@ window.onload = function disableButton() {
   });
 };
 
-const textArea = document.getElementById('textarea');
+const textArea = document.querySelector('#textarea');
 const counter = document.getElementById('counter');
 
-textArea.addEventListener('keydown', (event) => {
-  let contadorEmNumero = parseInt(counter.innerText);
-  if (contadorEmNumero > 0 && contadorEmNumero <= 500){
-        if(!(event.key == 'Backspace')){
-            contadorEmNumero = contadorEmNumero - 1;
-            counter.innerText = contadorEmNumero;
-        } else if(event.key == 'Backspace' && contadorEmNumero != 500){
-            contadorEmNumero = contadorEmNumero + 1;
-            counter.innerText = contadorEmNumero;    
-        }
-    } else if (contadorEmNumero == 0 && event.key == 'Backspace') {
-        contadorEmNumero = contadorEmNumero + 1;
-        counter.innerText = contadorEmNumero;
-    }
+// textArea.addEventListener('keydown', (e) => {
+//   contadorEmNumero = parseInt(counter.innerText);
+
+//   if (contadorEmNumero > 0 && contadorEmNumero <= 500){
+//         if(!(e.key == 'Backspace')){
+//             contadorEmNumero = contadorEmNumero - 1;
+//             counter.innerText = contadorEmNumero;
+//         } else if(e.key == 'Backspace' && contadorEmNumero != 500){
+//             contadorEmNumero = contadorEmNumero + 1;
+//             counter.innerText = contadorEmNumero;
+//         }
+//     } else if (contadorEmNumero == 0 && e.key == 'Backspace') {
+//         contadorEmNumero = contadorEmNumero + 1;
+//         counter.innerText = contadorEmNumero;
+//     }
+// });
+
+textArea.addEventListener('keyup', () => {
+  // const caracteresArea = textArea.value;
+  let r;
+  r = 500;
+  r = 500 - (document.querySelector('#textarea').value.length);
+  counter.innerText = r;
 });
