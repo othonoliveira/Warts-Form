@@ -23,3 +23,22 @@ window.onload = function disableButton() {
     }
   });
 };
+
+const textArea = document.getElementById('textarea');
+const counter = document.getElementById('counter');
+
+textArea.addEventListener('keydown', (event) => {
+  let contadorEmNumero = parseInt(counter.innerText);
+  if (contadorEmNumero > 0 && contadorEmNumero <= 500){
+        if(!(event.key == 'Backspace')){
+            contadorEmNumero = contadorEmNumero - 1;
+            counter.innerText = contadorEmNumero;
+        } else if(event.key == 'Backspace' && contadorEmNumero != 500){
+            contadorEmNumero = contadorEmNumero + 1;
+            counter.innerText = contadorEmNumero;    
+        }
+    } else if (contadorEmNumero == 0 && event.key == 'Backspace') {
+        contadorEmNumero = contadorEmNumero + 1;
+        counter.innerText = contadorEmNumero;
+    }
+});
