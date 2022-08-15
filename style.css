@@ -1,16 +1,21 @@
 * {
   margin: 0;
-}
-
-#evaluation-form {
-  border: 1px black solid;
-  width: 675px;
-  display: flex;
-  flex-direction: column;
+  padding: 0;
 }
 
 main {
   display: flex;
+  justify-content: space-around;
+}
+
+.email-senha {
+  width: 50%;
+}
+
+#evaluation-form {
+  width: 675px;
+  display: flex;
+  flex-direction: column;
 }
 
 #trybewarts-forms-logo {
@@ -19,7 +24,7 @@ main {
 
 #selection {
   display: flex;
-  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 #conteiner1 {
@@ -27,11 +32,15 @@ main {
   width: fit-content;
   gap: 30px;
   justify-content: space-around;
+  margin: 20px;
 }
 
 #conteiner2 {
   display: flex;
   width: fit-content;
+  gap: 30px;
+  justify-content: space-around;
+  margin: 20px;
 }
 
 .header {
@@ -46,31 +55,59 @@ main {
 
 .trybewarts-login {
   display: flex;
+  justify-content: flex-end;
+  width: 33%;
+  padding-right: 10px;
 }
 
 .trybewarts-header-logo {
   height: 80px;
+  width: 25%;
+}
+
+.info-conteiner {
+  width: 300px;
+}
+
+#trybewarts-header-title {
+  width: 33%;
+  text-align: center;
 }
 
 #avaliation {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
 }
 
 #avaliation-options {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-#avaliation-options label {
-  padding-right: 10px;
+  width: 500px;
+  margin: 20px;
 }
 
 #label-rate {
-  margin-right: 30px;
+  margin: 20px;
 }
 
 #comment-conteiner {
   display: flex;
   flex-direction: column;
+  margin: 20px;
+}
+
+#button-conteiner {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  margin-bottom: 20px;
+}
+
+#submit-btn {
+  width: 70px;
+}
+
+footer {
+  background-color: saddlebrown;
+  color: aliceblue;
+  padding: 20px;
+  margin: 0%;
 }

@@ -7,14 +7,15 @@ const textArea = document.querySelector('#textarea');
 const counter = document.getElementById('counter');
 const form = document.getElementById('evaluation-form');
 const formData = document.getElementById('form-data');
-const nome = document.getElementById('input-name');
-const sobreNome = document.getElementById('input-lastname');
+const name = document.getElementById('input-name');
+const lastName = document.getElementById('input-lastname');
 const emailForm = document.getElementById('input-email');
-const casa = document.getElementById('house');
-const familia = document.getElementsByClassName('radio-family');
+const house = document.getElementById('house');
+const family = document.getElementsByClassName('radio-family');
 const subject = document.getElementsByClassName('subject');
 const avaliation = document.getElementsByClassName('radio-rate');
-const observacao = document.getElementById('textarea');
+const observation = document.getElementById('textarea');
+const sendButton = document.getElementById('submit-btn');
 
 butaoEntrar.addEventListener('click', () => {
   if (email.value === 'tryber@teste.com' && password.value === '123456') {
@@ -63,15 +64,14 @@ function checkedBox(checkBox) {
   return arr.join(', ');
 }
 
-const sendButton = document.getElementById('submit-btn');
 sendButton.addEventListener('click', (event) => {
-  insert(formData, `Nome: ${nome.value} ${sobreNome.value}`);
+  insert(formData, `Nome: ${name.value} ${lastName.value}`);
   insert(formData, `Email: ${emailForm.value}`);
-  insert(formData, `Casa: ${casa.value}`);
-  insert(formData, `Família: ${checkedRadio(familia)}`);
+  insert(formData, `Casa: ${house.value}`);
+  insert(formData, `Família: ${checkedRadio(family)}`);
   insert(formData, `Matérias: ${checkedBox(subject)}`);
   insert(formData, `Avaliação: ${checkedRadio(avaliation)}`);
-  insert(formData, `Observações: ${observacao.value}`);
+  insert(formData, `Observações: ${observation.value}`);
   form.style.display = 'none';
   event.preventDefault();
 });
